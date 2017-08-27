@@ -34,7 +34,7 @@ android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     ........
     android:background="@mipmap/index_bar">
-    ```
+```
 
 - [x] 按下有不同效果(新建xml文件）
 ```
