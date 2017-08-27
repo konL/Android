@@ -15,13 +15,13 @@
 ![image](https://github.com/konL/Android/blob/master/screenshot/4.png)
 ![image](https://github.com/konL/Android/blob/master/screenshot/5.png)
 
-1)全屏显示
+### 全屏显示
 ```
 android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
 ```
 [注意]在MainActivity中要改成extends Activity(仍然不知道为什么）来源图片改成src
 
-2)title_bar分析
+### title_bar分析
 
 ![image](https://github.com/konL/Android/blob/master/screenshot/2.png)
 
@@ -48,6 +48,7 @@ back_button_icon.xml(用selector）
     <item android:drawable="@mipmap/all_back" />
 </selector>
 ```
+
 按下效果不同的例子同理
 
 - [x] 左右按钮垂直居中，右边按钮水平分布
@@ -57,14 +58,15 @@ back_button_icon.xml(用selector）
         //各种居中都用
         layout_gravity="XXXX"实现
         android:layout_gravity="center_vertical|right"(右居中）
-     ```
+```
      
-**布局到主Activity即可**
+- [x] 布局到主Activity
+
 ```
 <include layout="@layout/top_bar"/>
 ```
 
-3)唱片动画（布局+动画应用）
+### 唱片动画（布局+动画应用）
 
 ![image](https://github.com/konL/Android/blob/master/screenshot/3.png)
 
@@ -120,17 +122,20 @@ back_button_icon.xml(用selector）
         mPanLin= new LinearInterpolator() 
        //给动画对象传入速度对象
         mPanAnim.setInterpolator(mPanLin);
-        ```
+```
+
 **动画效果分析：点击按钮，按钮消失（setVisibility),唱针完成第一部分动画定住（对动画对象添加setFillAfter(true)），然后唱片开始转，然后唱针归位，按钮出现**
 
 动画前后效果应该使用监听事件实现
->.setAnimationListener(new Animation.AnimationListener() {
+```
+.setAnimationListener(new Animation.AnimationListener() {
 
 public void onAnimationStart(Animation animation) {
 
 public void onAnimationEnd(Animation animation) {
              
 public void onAnimationRepeat(Animation animation) {
+```
 
 **对按钮的设置**
 ```
@@ -152,6 +157,6 @@ public void onAnimationRepeat(Animation animation) {
         mBtnPlayStart.setVisibility(View.INVISIBLE);}
     }
     }
-    ```
+ ```
           
 
