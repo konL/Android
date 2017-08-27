@@ -89,10 +89,10 @@ back_button_icon.xml(用selector）
     //绑定
     private ImageView mViewPan;
     private ImageView mViewPanBar;
-    ```
+```
     xml动画
    - 新建anim文件夹，新建xml文件(加入Rotate属性）
-   ```
+```
    <?xmlns version="1.0" encoding="utf-8" ?>
 <set xmlns:android="http://schemas.android.com/apk/res/android">
     <rotate
