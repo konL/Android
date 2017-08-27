@@ -2,7 +2,7 @@
 
 ## 猜歌游戏实战
 
-- 页面布局
+>页面布局
 
 **得到界面最终图，拆分，思考用什么布局**
 
@@ -108,7 +108,7 @@ back_button_icon.xml(用selector）
  >【Animation方法】
  -  Animation mPanAnim= AnimationUtils.loadAnimation(this,R.anim.rotate);应用xml动画到对象
  - Object.startAnimation(animation anim)绑定动画
- 【LinearInterpolator】
+ >【LinearInterpolator】
  - Interpolator 被用来修饰动画效果，定义动画的变化率，可以使存在的动画效果accelerated(加速)，decelerated(减速),repeated(重复),bounced(弹跳)等。
  
  - 初始化动画（初始化应该在onCreate里)【同理对所有需要动画的实例做一次】
